@@ -225,8 +225,9 @@ function Gauge(placeholderName, configuration)
 	{
 		var pointerContainer = this.body.select(".pointerContainer");
 		
-		pointerContainer.selectAll("text").text(Math.round(value));
-		
+		//pointerContainer.selectAll("text").text(Math.round(value));
+		pointerContainer.selectAll("text").text(value);
+
 		var pointer = pointerContainer.selectAll("path");
 		pointer.transition()
 					.duration(undefined != transitionDuration ? transitionDuration : this.config.transitionDuration)
